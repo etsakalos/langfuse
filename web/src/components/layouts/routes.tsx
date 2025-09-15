@@ -18,6 +18,7 @@ import {
   SquarePercent,
   ClipboardPen,
   Clock,
+  Wrench,
 } from "lucide-react";
 import { type ReactNode } from "react";
 import { type Entitlement } from "@/src/features/entitlements/constants/entitlements";
@@ -39,6 +40,7 @@ export enum RouteGroup {
   Observability = "Observability",
   PromptManagement = "Prompt Management",
   Evaluation = "Evaluation",
+  FineTuning = "Fine-tuning",
 }
 
 export type Route = {
@@ -166,6 +168,22 @@ export const ROUTES: Route[] = [
     icon: Database,
     productModule: "datasets",
     group: RouteGroup.Evaluation,
+    section: RouteSection.Main,
+  },
+  {
+    title: "Easy Dataset",
+    pathname: "http://localhost:1717",
+    newTab: true,
+    icon: Wrench,
+    group: RouteGroup.FineTuning,
+    section: RouteSection.Main,
+  },
+  {
+    title: "Llama Factory",
+    pathname: "http://localhost:8081",
+    newTab: true,
+    icon: Wrench,
+    group: RouteGroup.FineTuning,
     section: RouteSection.Main,
   },
   {
